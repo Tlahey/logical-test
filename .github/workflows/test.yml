@@ -3,10 +3,10 @@ name: Test
 on:
   workflow_dispatch:
     inputs:
-    documentation:
-      description: |
-        'Consultez la doc avant de lancer :  https://wiki.monprojet.com/deploy'
-      required: false
+      documentation:
+        description: |
+          'Consultez la doc avant de lancer :  https://wiki.monprojet.com/deploy'
+        required: false
       # This input is defined to false for a release. -> Apply the canary deployment
       # When we want to rollback etc ... we need to set this value to true to disable the canary deployment
       skip-progressive-rollout:
@@ -15,9 +15,6 @@ on:
           Uncheck - Do a progressive rollout
           Check - Do an instant deployment
         default: false
-  release:
-    types:
-      - released
 
 jobs:
   test:
