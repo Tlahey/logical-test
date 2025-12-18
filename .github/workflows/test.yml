@@ -3,9 +3,8 @@ name: Test
 on:
   workflow_dispatch:
     inputs:
-      documentation:
-        description: |
-          'Consultez la doc avant de lancer :  https://wiki.monprojet.com/deploy'
+      "--- ⚠️ INSTRUCTION ⚠️ ---":
+        description: "Please select the right tag before launch the workflow."
         required: false
       # This input is defined to false for a release. -> Apply the canary deployment
       # When we want to rollback etc ... we need to set this value to true to disable the canary deployment
